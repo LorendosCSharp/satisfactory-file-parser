@@ -1,3 +1,6 @@
+# This is a fork
+it is changed to work in browser without node 
+
 # Satisfactory File Parser
 
 [![Run Tests](https://github.com/etothepii4/satisfactory-file-parser/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/etothepii4/satisfactory-file-parser/actions/workflows/tests.yml)
