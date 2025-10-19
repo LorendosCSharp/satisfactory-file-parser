@@ -1,4 +1,3 @@
-import { WritableStreamDefaultWriter } from "stream/web";
 import { SatisfactorySaveHeader } from '../../satisfactory/save/satisfactory-save-header';
 import { ChunkCompressionInfo } from "../../satisfactory/save/save-body-chunks";
 import { Grids, SaveBodyValidation } from '../../satisfactory/save/save-reader';

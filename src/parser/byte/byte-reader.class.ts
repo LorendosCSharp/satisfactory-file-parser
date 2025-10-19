@@ -71,6 +71,10 @@ export abstract class ByteReader implements BinaryReadable {
 	public readInt32(): number {
 		let data = this.bufferView.getInt32(this.currentByte, this.alignment === Alignment.LITTLE_ENDIAN);
 		this.currentByte += 4;
+
+		console.log("current Byte:", this.currentByte)
+		console.log("myx Byte:", this.maxByte)
+
 		return data;
 	}
 	/**

@@ -1,4 +1,4 @@
-import { QueuingStrategy, ReadableStream, ReadableStreamDefaultController } from "stream/web";
+
 import { UnsupportedVersionError } from '../../error/parser.error';
 import { Level } from '../../satisfactory/save/level';
 import { LevelToDestroyedActorsMap } from '../../satisfactory/save/level-to-destroyed-actors-map';
@@ -11,13 +11,10 @@ import { Grids, SaveBodyValidation, SaveReader } from '../../satisfactory/save/s
 import { ObjectReference } from '../../satisfactory/types/structs/ObjectReference';
 
 const DEFAULT_BYTE_HIGHWATERMARK = 1024 * 1024 * 200;	// 200MiB
-const createStringLengthQueuingStrategy = (highWaterMark: number = DEFAULT_BYTE_HIGHWATERMARK / 4): QueuingStrategy<string> => ({
+const createStringLengthQueuingStrategy = (highWaterMark: number = DEFAULT_BYTE_HIGHWATERMARK / 4) => ({
 	highWaterMark,
-	size: (chunk: string | undefined) => {
-		if (chunk === undefined) {
-			return 0;
-		}
-		return chunk.length;
+	size: (chunk?: string) => {
+		return chunk?.length ?? 0;
 	}
 });
 

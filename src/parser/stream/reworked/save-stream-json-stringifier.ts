@@ -1,4 +1,3 @@
-import { WritableStream } from "stream/web";
 import { SatisfactorySave } from '../../satisfactory/save/satisfactory-save';
 import { SaveStreamWriter } from "./save-stream-writer.class";
 
